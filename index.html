@@ -4,11 +4,23 @@
   <link href="connect4.css" rel="stylesheet">
 </head>
 <body>
-
-<div id="game">
-  <table id="board"></table>
-</div>
-
+  <div id="gameContainer">
+    <h1 id="gameHeader">Connect Four</h1>
+    <div id="game">
+      <label id="p1ColorLabel" for="p1ColorBox">P1 Color:</label>
+      <div class="tooltip">
+        <input id="p1ColorBox" type="color" value="#0000FF">
+        <span class="tooltiptext">Click to Change Color</span>
+      </div>
+      <label id="p2ColorLabel" for="p2ColorBox">P2 Color: </label>
+      <div class="tooltip">
+        <input id="p2ColorBox" type="color" value="#FF0000">
+        <span class="tooltiptext">Click to Change Color</span>
+      </div>
+      <input id="startButton" type="button" value="Start Game">
+      <table id="board"></table>
+    </div>
+  </div>
 <script src="connect4.js"></script>
 
 </body>

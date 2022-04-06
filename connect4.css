@@ -3,8 +3,53 @@
 #board td {
   width: 50px;
   height: 50px;
-  border: solid 1px #666;
+  border: solid 1px steelblue;
 }
+#board {
+  background-color: beige;
+}
+#gameHeader{
+  color:steelblue;
+}
+#gameContainer{
+  margin:auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+  flex-direction: column;
+}
+label{
+  color:steelblue;
+}
+.tooltip{
+  position: relative;
+  display:inline-block;
+  border-bottom: 1px dotted blue;
+}
+.noDisplay{
+  display:none;
+}
+
+.tooltip .tooltiptext{
+  visibility: hidden;
+  width: 120px;
+  background-color:black;
+  color:#fff;
+  text-align:center;
+  padding:5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index:1;
+  top:100%;
+  left:50%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext{
+  visibility:visible;
+}
+
 
 /* pieces are div within game table cells: draw as colored circles */
 
@@ -13,15 +58,13 @@
   width: 80%;
   height: 80%;
   border-radius: 50%;
+  animation: drop 1s;
+}
+@keyframes drop {
+  from {transform: translateY(-700%);}
+  to {transform: translateY(0%)}
 }
 
-.piece.p1 {
-  background-color: red;
-}
-
-.piece.p2 {
-  background-color: blue;
-}
 
 /* column-top is table row of clickable areas for each column */
 
